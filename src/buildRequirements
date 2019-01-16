@@ -1,0 +1,20 @@
+28 points
+
+//16 points//
+REQUIRED - One stateful component, not counting App.js
+A stateful component is defined with class extends Component and must contain state. The state must be modified somewhere.
+
+
+REQUIRED - One stateless functional component
+A stateless functional component, or an SFC, is simply a function. Learn more here --> https://reactjs.org/docs/components-and-props.html
+
+
+REQUIRED - One GET endpoint in Express
+A GET endpoint should return some data that you show on your website.
+
+
+REQUIRED - One endpoint that uses req.body
+To use req.body, you'll need a POST, PUT, or PATCH. If you use another HTTP verb, get it approved by your mentor first.
+
+
+//>=12 points//
