@@ -1,3 +1,40 @@
+# PROJECT SUMMARY
+
+Create a recipe search and shopping list builder for people that need to plan for large groups and for many meals. This will be accomplished by utilizing a recipe API to display searchable recipe cards. Recipes will be selected and the shopping list will compile common ingredients into a shopping list with summed quantities. A report can be generated to show how much of each ingredient goes to which meals.
+
+## Required Components
+
+### Header / Search Bar
+##### use query string parameter for search bar
+notes
+
+### Multiplier Inputs (# of meals, # of people, servings per person)
+notes
+
+### Recipe Display (with allergy filters)
+##### use column with card type display to meet multiple components and stateless components requirements
+##### use express GET to meet requirement
+notes
+
+### Shopping Cart (Get, Put, Post, Delete)
+##### *Meets required stateful component
+##### *Meets required POST, GET, PUT, DELETE (URL parameters)
+##### *POST will use req.body to add to local server
+notes
+
+### Shopping List Generator
+##### list component
+notes
+
+
+# EDAMAM RECIPE API NOTES
+API Docs: (https://developer.edamam.com/edamam-docs-recipe-api)
+
+# HELPFUL RESOURCES
+https://www.youtube.com/watch?v=PbJt7-a2274 react app with recipe API
+
+
+# React Notes
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
