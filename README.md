@@ -1,7 +1,8 @@
-###EDAMAM RECIPE API NOTES
+# EDAMAM RECIPE API NOTES
 API Docs: (https://developer.edamam.com/edamam-docs-recipe-api)
 
-###React Notes
+
+# React Notes
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
