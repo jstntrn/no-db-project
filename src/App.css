@@ -5,6 +5,11 @@
   margin-top: 0px;
 }
 
+.logo {
+  float: left;
+  margin-left: 50px;
+}
+
 /* block to fill same space as header so that scrolled content will be below fixed header */
 .Header-fill { 
   min-height: 70px;
@@ -16,7 +21,8 @@
 }
 
 .App-header {
-  background-color: gray;
+  background-color: white;
+  border-bottom: 1px solid lightgray; 
   position: fixed;
   min-height: 70px;
   width: 100%;
@@ -24,22 +30,24 @@
   color: white;
   align-content: center;
   padding-left: 20px;
+  opacity: .95;
 }
 
 
 .Header-title {
-  color: white;
-  font-family: serif;
+  color: lightseagreen;
+  font-family: sans-serif;
 }
 
 .Search {
   position: absolute;
   top: 18px;
-  left: 120px;
+  right: 90px;
   margin: 0px auto;
 }
 
 .Searchbar {
+  background-color: lightcoral;
   text-align: center;
   width: 500px;
   height: 30px;
