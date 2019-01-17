@@ -1,6 +1,5 @@
 
 .App {
-  background-color: lightgrey;
   width: 100%;
   height: 100vh;
   margin-top: 0px;
@@ -13,11 +12,11 @@
   margin-top: 0px;
   align-content: center;
   padding-left: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .App-header {
-  background-color: black;
+  background-color: gray;
   position: fixed;
   min-height: 70px;
   width: 100%;
@@ -25,6 +24,28 @@
   color: white;
   align-content: center;
   padding-left: 20px;
+}
+
+
+.Header-title {
+  color: white;
+  font-family: serif;
+}
+
+.Search {
+  position: absolute;
+  top: 18px;
+  left: 120px;
+  margin: 0px auto;
+}
+
+.Searchbar {
+  text-align: center;
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+
 }
 
 .Card-display {
@@ -38,8 +59,8 @@
 .Card {
   text-align: center;
   width: 200px;
-  height: 300px;
-  background-color: darkgray;
+  height: 315px;
+  background-color: rgb(226, 226, 226);
   margin: 10px;
   color: white;
   border-radius: 10px;
@@ -47,10 +68,34 @@
 
 .Card-image {
   height: 200px;
-  width: 170px;
+  width: 175px;
   background-color: white;
   margin: 10px auto;
   border-radius: 5px;
+  color: black;
+}
+
+.Card-text {
+  margin: 1px;
+  padding: 0px 5px;
+  height: 50px;
+  overflow: hidden;
+  color: darkgray;
+}
+
+.Card-button-display {
+  display: flex;
+  justify-content: space-around;
+  margin: 2px 7px;
+}
+
+.Card-button {
+  margin: 0px;
+  background-color: lightcoral;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
 }
 
 .Card-tall {
@@ -62,7 +107,4 @@
   color: white;
 }
 
-.Header-title {
-  color: white;
-  font-family: serif;
-}
+
