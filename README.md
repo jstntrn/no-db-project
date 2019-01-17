@@ -30,6 +30,9 @@ notes
 # EDAMAM RECIPE API NOTES
 API Docs: (https://developer.edamam.com/edamam-docs-recipe-api)
 
+# HELPFUL RESOURCES
+https://www.youtube.com/watch?v=PbJt7-a2274 react app with recipe API
+
 
 # React Notes
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
