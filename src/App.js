@@ -7,9 +7,9 @@ class App extends Component {
     return (
       <div>
         <div className="App-header">
-          <h2 className="Header-title">Header</h2>
+          <h2 className="Header-title">Tacosss</h2>
           <div className="Search">
-            <input className="Searchbar"/>
+            <input className="Searchbar" defaultValue={"Search"} />
           </div>
         </div>
         <div className="Header-fill"></div>
