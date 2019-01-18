@@ -8,6 +8,9 @@
 .logo {
   float: left;
   margin-left: 50px;
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 50px;
 }
 
 /* block to fill same space as header so that scrolled content will be below fixed header */
@@ -33,14 +36,11 @@
   opacity: .95;
 }
 
-.header-container {
-  
-}
-
 
 .Header-title {
-  color: lightseagreen;
+  color: #FFAA20;
   font-family: sans-serif;
+  padding-top: 2px;
 }
 
 .Search {
@@ -51,7 +51,7 @@
 }
 
 .Searchbar {
-  background-color: lightcoral;
+  background-color: #FFAA20;
   text-align: center;
   width: 500px;
   height: 30px;
@@ -69,86 +69,3 @@
   width: 90%;
   margin: 0 auto;
 }
-
-.Card {
-  text-align: center;
-  width: 200px;
-  height: 315px;
-  background-color: rgb(226, 226, 226);
-  margin: 10px;
-  color: white;
-  border-radius: 10px;
-}
-
-.Card-image {
-  height: 100%;
-  width: 100%;
-  border-radius: 5px;
-  color: black;
-}
-
-.image-container:hover .overlay {
-  opacity: .7;
-}
-
-.image-container {
-  height: 200px;
-  width: 175px;
-  margin: 10px auto 5px auto;
-  border-radius: 5px;
-}
-
-.overlay {
-  position: relative;
-  top: -205px;
-  opacity: 0;
-  height: 200px;
-  width: 175px;
-  transition: .5s ease;
-  background-color: lightcoral;
-  border-radius: 5px;
-}
-
-.card-name {
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 20px;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-
-.Card-text {
-  margin: 0px;
-  padding: 0px 5px;
-  height: 50px;
-  overflow: hidden;
-  color: darkgray;
-}
-
-.Card-button-display {
-  display: flex;
-  justify-content: space-around;
-  margin: 2px 7px;
-}
-
-.Card-button {
-  margin: 0px;
-  background-color: lightcoral;
-  width: 80px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-}
-
-.Card-tall {
-  text-align: center;
-  width: 200px;
-  height: 400px;
-  background-color: darkgray;
-  margin: 10px;
-  color: white;
-}
-
-

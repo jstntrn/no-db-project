@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
-
+import plus from './../images/icons/plus.png';
+import './CardAdd.css';
 //put edit and delete icons for two buttons
 //on image click show large display with ingredients and instructions
 
-export default class Card extends Component {
+export default class AddRecipe extends Component {
     constructor(props){
         super(props)
     }
 
     render(){
         return(
-            <div className="Card">
-                <img />
-                <p className="Card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id erat at quam vestibulum convallis a facilisis velit.
-                </p>
-                <div className="Card-button-display">
-                    <button className="Card-button">1</button>
-                    <button className="Card-button">2</button>
-                </div>
+            <div className="AddCard">
+                <img className="AddIcon" src={plus} alt='add recipe'/>
+                <p>Add Recipe</p>
             </div>
         );
     }

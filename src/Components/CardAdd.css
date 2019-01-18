@@ -1,0 +1,19 @@
+.AddCard {
+  text-align: center;
+  width: 200px;
+  height: 270px;
+  background-color: #FFAA20;
+  margin: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+.AddIcon {
+  margin-top: 50px;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}
