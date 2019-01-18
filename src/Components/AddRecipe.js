@@ -5,9 +5,6 @@ import './CardAdd.css';
 //on image click show large display with ingredients and instructions
 
 export default class AddRecipe extends Component {
-    constructor(props){
-        super(props)
-    }
 
     render(){
         return(

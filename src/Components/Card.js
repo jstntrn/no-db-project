@@ -6,9 +6,6 @@ import trash from './../images/icons/garbage.png';
 //on image click show large display with ingredients and instructions
 
 export default class Card extends Component {
-    constructor(props){
-        super(props)
-    }
 
     render(){
         const {image_url, title} = this.props;

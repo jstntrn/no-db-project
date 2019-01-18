@@ -2,19 +2,16 @@ import React, { Component } from 'react';
 import './Search.css'
 
 export default class Search extends Component{
+
     constructor(props){
         super(props);
 
-        this.state = {
-            text: ''
-        }
+        this.filterRec = this.filterRec.bind(this);
     }
 
     filterRec(val){
+        console.log("checksearch")
         const {filterRec} = this.props;
-        this.setState({
-            text: val
-        })
         filterRec(val);
     }
 
@@ -24,7 +21,7 @@ export default class Search extends Component{
                 <input className="search-input"
                     placeholder="Search Recipes"
                     onChange={ (e) => this.filterRec(e.target.value) }
-                    value={this.state.text}/>
+/>
             </div>
         )
     }

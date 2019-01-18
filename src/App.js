@@ -13,6 +13,8 @@ class App extends Component {
     this.state = {
       recipeCards: []
     }
+
+    this.filterRecipes = this.filterRecipes.bind(this);
   }
 
   componentDidMount() {
@@ -22,16 +24,32 @@ class App extends Component {
     })
   }
 
-  filterRecipes(text) {
-    axios.get(`/api/recipes/filter?title=${text}`)
+  filterRecipes(str) {
+    axios.get(`/api/recipes/filter?text=${str}`)
     .then( (res) => {
       this.setState({recipeCards: res.data});
+      console.log("checkfunction")
     })
   }
 
   render() {
     return (
       <div>
+        <div className="modal">
+          <div className="model-content">
+            <div className="white-box">
+              <div className="close-modal">+</div>
+              <img className="modal-logo" src={logo} alt='logo'/>
+              <form>
+                  <input className="title-input" placeholder="Recipe Title" />
+                  <input className="image-input" placeholder="Image URL" />
+                  <input className="ingredients-input" placeholder="Ingredients" />
+                  <input className="instruction-input" placeholder="Cooking Instructions" />
+                  <button className="add-button">add recipe</button>
+              </form>
+            </div>
+          </div>
+        </div>
         <div className="App-header">
           <img className="logo" src={logo} alt='logo'/>
           <h2 className="Header-title">Golden Recipes</h2>
@@ -52,7 +70,6 @@ class App extends Component {
               title={card.title}/>
             ))
           }
-
         </div>
         
       </div>

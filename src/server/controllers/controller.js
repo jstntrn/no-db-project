@@ -165,7 +165,14 @@ module.exports = {
         console.log('got recipes');
     },
     filterRecipes: (req, res) => {
-        
+        console.log("checkcontrol")
+        const {text} = req.body;
+        console.log(text)
+        recipes = recipes.filter( recipe => {
+            return recipe.title.includes(text) === true;
+        })
+        res.status(200).send(recipes)
+        console.log('filtered recipes')
     },
     addRecipe: (req, res) => {
         const {title, image_url, ingredients, instructions} = req.body;
