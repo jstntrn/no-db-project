@@ -6,9 +6,12 @@ import './CardAdd.css';
 
 export default class AddRecipe extends Component {
 
+
     render(){
+
+        const {openModal} = this.props;
         return(
-            <div className="AddCard">
+            <div className="AddCard" onClick={() => openModal()}>
                 <img className="AddIcon" src={plus} alt='add recipe'/>
                 <p>Add Recipe</p>
             </div>

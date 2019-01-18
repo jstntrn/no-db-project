@@ -3,18 +3,23 @@ import Card from './Components/Card';
 import AddRecipe from './Components/AddRecipe';
 import logo from './images/chef-hat.png'
 import Search from './Components/Search';
+import Modal from 'react-modal';
 import './App.css';
 import axios from 'axios';
+
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      recipeCards: []
-    }
-
+      recipeCards: [],
+      showModal: false
+    };
+    
     this.filterRecipes = this.filterRecipes.bind(this);
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
   componentDidMount() {
@@ -32,24 +37,30 @@ class App extends Component {
     })
   }
 
+  handleOpenModal (val) {
+    this.setState({ showModal: val })
+    console.log('modal opened');
+  }
+  
+  handleCloseModal () {
+    this.setState({ showModal: false });
+    console.log('modal closed');
+  }
+
   render() {
     return (
       <div>
-        <div className="modal">
-          <div className="model-content">
-            <div className="white-box">
-              <div className="close-modal">+</div>
-              <img className="modal-logo" src={logo} alt='logo'/>
-              <form>
-                  <input className="title-input" placeholder="Recipe Title" />
-                  <input className="image-input" placeholder="Image URL" />
-                  <input className="ingredients-input" placeholder="Ingredients" />
-                  <input className="instruction-input" placeholder="Cooking Instructions" />
-                  <button className="add-button">add recipe</button>
-              </form>
-            </div>
-          </div>
-        </div>
+        <Modal
+          isOpen={this.state.showModal}
+          contentLabel="onRequestClose Example"
+          onRequestClose={this.handleCloseModal}
+          className="Modal"
+          overlayClassName="Overlay"
+        >
+          <p>Add Item</p>
+          <button onClick={this.handleCloseModal}>Close Modal</button>
+        </Modal>
+
         <div className="App-header">
           <img className="logo" src={logo} alt='logo'/>
           <h2 className="Header-title">Golden Recipes</h2>
@@ -61,7 +72,9 @@ class App extends Component {
         </div>
         <div className="Header-fill"></div>
         <div className="Card-display">
-          <AddRecipe />
+          <AddRecipe 
+            openModal = {this.handleOpenModal}
+          />
           {
             this.state.recipeCards.map (card => (
               <Card 

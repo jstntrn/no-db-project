@@ -1,4 +1,4 @@
-let id = 12;
+let id = 20;
 
 let recipes = [
     {
@@ -16,7 +16,7 @@ let recipes = [
     },
     {
         id: 1,
-        title: 'Pesto',
+        title: 'Pesto Pasta',
         image_url: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
         ingredients: [
             {qty: 1, units: 'cups', item: 'Water'},
@@ -157,6 +157,110 @@ let recipes = [
         ],
         instructions: 'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.',
     },
+    {
+        id: 12,
+        title: 'Egg Sandwich',
+        image_url: 'https://images.unsplash.com/photo-1513442542250-854d436a73f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        ingredients: [
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'}
+        ],
+        instructions: 'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.',
+    },
+    {
+        id: 13,
+        title: 'Enchiladas',
+        image_url: 'https://images.unsplash.com/photo-1534352956036-cd81e27dd615?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        ingredients: [
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'}
+        ],
+        instructions: 'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.',
+    },
+    {
+        id: 14,
+        title: 'Caramel Cake',
+        image_url: 'https://images.unsplash.com/photo-1511911063855-2bf39afa5b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        ingredients: [
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'}
+        ],
+        instructions: 'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.',
+    },
+    {
+        id: 15,
+        title: 'Chocolate Mousse',
+        image_url: 'https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        ingredients: [
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'}
+        ],
+        instructions: 'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.',
+    },
+    {
+        id: 16,
+        title: 'Blueberry Pie',
+        image_url: 'https://images.unsplash.com/photo-1476887334197-56adbf254e1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        ingredients: [
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'}
+        ],
+        instructions: 'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.',
+    },
+    {
+        id: 17,
+        title: 'Croissant',
+        image_url: 'https://images.unsplash.com/photo-1503647869191-8eb843e92c0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        ingredients: [
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'}
+        ],
+        instructions: 'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.',
+    },
+    {
+        id: 18,
+        title: 'Rasberry Ice Cream',
+        image_url: 'https://images.unsplash.com/photo-1540476279764-95cd842bf327?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        ingredients: [
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'}
+        ],
+        instructions: 'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.',
+    },
+    {
+        id: 19,
+        title: 'Vegetable Soup',
+        image_url: 'https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+        ingredients: [
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'},
+            {qty: 1, units: 'cups', item: 'Water'}
+        ],
+        instructions: 'In a large bowl, sift together the flour, baking powder, salt and sugar. Make a well in the center and pour in the milk, egg and melted butter; mix until smooth. Heat a lightly oiled griddle or frying pan over medium high heat. Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.',
+    }
 ];
 
 module.exports = {
