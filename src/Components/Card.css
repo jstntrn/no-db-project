@@ -1,66 +1,78 @@
 .Card {
-    text-align: center;
-    width: 200px;
-    height: 270px;
-    background-color: rgb(226, 226, 226);
-    margin: 10px;
-    color: white;
-    border-radius: 10px;
-  }
-  
-  .Card-image {
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    color: black;
-  }
-  
-  .image-container:hover .overlay {
-    opacity: .7;
-  }
-  
-  .image-container {
-    height: 200px;
-    width: 175px;
-    margin: 10px auto 5px auto;
-    border-radius: 5px;
-  }
-  
-  .overlay {
-    position: relative;
-    top: -205px;
-    opacity: 0;
-    height: 200px;
-    width: 175px;
-    transition: .5s ease;
-    background-color: #FFAA20;
-    border-radius: 5px;
-  }
-  
-  .card-name {
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 20px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
-  
-  .Card-button-display {
-    display: flex;
-    justify-content: space-around;
-    margin: 2px 7px;
-  }
-  
-  .Card-tall {
-    text-align: center;
-    width: 200px;
-    height: 400px;
-    background-color: darkgray;
-    margin: 10px;
-    color: white;
-  }
-  
-  
-  
+  text-align: center;
+  width: 200px;
+  height: 270px;
+  background-color: rgb(241, 241, 241);
+  margin: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+
+.card-button {
+  height: 25px;
+  margin: 5px 10px;
+  padding: 5px;
+}
+
+.card-button:hover {
+  border: 1px solid lightcoral;
+  border-radius: 5px;
+}
+
+.image-container:hover .overlay {
+  opacity: .9;
+}
+
+.image-container {
+  height: 200px;
+  width: 175px;
+  margin: 10px auto 5px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.Card-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  color: black;
+}
+
+.overlay {
+  position: relative;
+  top: -205px;
+  opacity: 0;
+  height: 200px;
+  width: 175px;
+  transition: .5s ease;
+  background-color: #FFAA20;
+  border-radius: 5px;
+}
+
+.card-name {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.Card-button-display {
+  display: flex;
+  justify-content: space-around;
+  margin: 2px 7px;
+}
+
+.Card-tall {
+  text-align: center;
+  width: 200px;
+  height: 400px;
+  background-color: darkgray;
+  margin: 10px;
+  color: white;
+}
+
+

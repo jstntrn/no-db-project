@@ -26,7 +26,7 @@ class App extends Component {
       <div>
         <div className="App-header">
           <img className="logo" src={logo} alt='logo'/>
-          <h2 className="Header-title">Golden Chef</h2>
+          <h2 className="Header-title">Golden Recipes</h2>
           <div className="Search">
             <input className="Searchbar" defaultValue={"Search"} />
           </div>
