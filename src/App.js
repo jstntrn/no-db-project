@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from './Components/Card';
 import AddRecipe from './Components/AddRecipe';
 import logo from './images/chef-hat.png'
+import Search from './Components/Search';
 import './App.css';
 import axios from 'axios';
 
@@ -21,6 +22,13 @@ class App extends Component {
     })
   }
 
+  filterRecipes(text) {
+    axios.get(`/api/recipes/filter?title=${text}`)
+    .then( (res) => {
+      this.setState({recipeCards: res.data});
+    })
+  }
+
   render() {
     return (
       <div>
@@ -28,7 +36,9 @@ class App extends Component {
           <img className="logo" src={logo} alt='logo'/>
           <h2 className="Header-title">Golden Recipes</h2>
           <div className="Search">
-            <input className="Searchbar" defaultValue={"Search"} />
+            <Search 
+              filterRec = {this.filterRecipes}
+            />
           </div>
         </div>
         <div className="Header-fill"></div>

@@ -1,0 +1,20 @@
+.search-input {
+    border: none;
+    background: none;
+    text-align: center;
+    
+}
+
+.search-parent {
+    height: 100%;
+    align-items: center;
+}
+
+.search-content {
+    background-color: #FFAA20;
+    text-align: center;
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    }

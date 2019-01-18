@@ -164,6 +164,9 @@ module.exports = {
         res.status(200).send(recipes)
         console.log('got recipes');
     },
+    filterRecipes: (req, res) => {
+        
+    },
     addRecipe: (req, res) => {
         const {title, image_url, ingredients, instructions} = req.body;
         recipes.push({
