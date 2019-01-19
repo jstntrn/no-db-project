@@ -270,12 +270,16 @@ module.exports = {
     },
     filterRecipes: (req, res) => {
         console.log("checkcontrol")
-        const {text} = req.body;
+        const {text} = req.params;
         console.log(text)
-        recipes = recipes.filter( recipe => {
-            return recipe.title.includes(text) === true;
+        let lowerText = text.toLowerCase();
+        recipesFiltered = recipes.filter( recipe => {
+            let lowerTitle = recipe.title.toLowerCase();
+            if(lowerTitle.includes(lowerText) === true){
+                return recipe;
+            };
         })
-        res.status(200).send(recipes)
+        res.status(200).send(recipesFiltered)
         console.log('filtered recipes')
     },
     addRecipe: (req, res) => {

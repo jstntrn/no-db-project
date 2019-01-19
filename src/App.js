@@ -20,6 +20,9 @@ class App extends Component {
     this.filterRecipes = this.filterRecipes.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.addRecipe = this.addRecipe.bind(this);
+    this.deleteRecipe = this.deleteRecipe.bind(this);
+    this.editRecipe = this.editRecipe.bind(this);
   }
 
   componentDidMount() {
@@ -29,8 +32,31 @@ class App extends Component {
     })
   }
 
+  addRecipe(obj) {
+    axios.post('/api/recipes', obj)
+    .then( (res) => {
+      this.setState({recipeCards: res.data})
+    })
+  }
+
+  deleteRecipe(id) {
+    axios.delete(`/api/recipes/${id}`)
+    .then( (res) => {
+      console.log("deleted")
+      this.setState({recipeCards: res.data})
+    })
+  }
+
+  editRecipe(id) {
+    axios.delete(`/api/recipes/${id}`)
+    .then( (res) => {
+      console.log("edited")
+      this.setState({recipeCards: res.data})
+    })
+  }
+
   filterRecipes(str) {
-    axios.get(`/api/recipes/filter?text=${str}`)
+    axios.get(`/api/recipes/${str}`)
     .then( (res) => {
       this.setState({recipeCards: res.data});
       console.log("checkfunction")
@@ -79,8 +105,10 @@ class App extends Component {
             this.state.recipeCards.map (card => (
               <Card 
               key={card.id}
+              id={card.id}
               image_url={card.image_url}
-              title={card.title}/>
+              title={card.title}
+              deleteRec = {this.deleteRecipe}/>
             ))
           }
         </div>
