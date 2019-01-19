@@ -3,7 +3,7 @@ import Card from './Components/Card';
 import AddRecipe from './Components/AddRecipe';
 import logo from './images/chef-hat.png'
 import Search from './Components/Search';
-import Modal from 'react-modal';
+import Modal from './Components/Modal'
 import './App.css';
 import axios from 'axios';
 
@@ -63,28 +63,23 @@ class App extends Component {
     })
   }
 
-  handleOpenModal (val) {
-    this.setState({ showModal: val })
-    console.log('modal opened');
+  handleOpenModal () {
+    this.setState({ showModal: true })
+    console.log(this.state.showModal);
   }
   
   handleCloseModal () {
     this.setState({ showModal: false });
-    console.log('modal closed');
+    console.log(this.state.showModal);
   }
 
   render() {
     return (
       <div>
-        <Modal
-          isOpen={this.state.showModal}
-          contentLabel="onRequestClose Example"
-          onRequestClose={this.handleCloseModal}
-          className="Modal"
-          overlayClassName="Overlay"
-        >
-          <p>Add Item</p>
-          <button onClick={this.handleCloseModal}>Close Modal</button>
+        <Modal showModal={this.state.showModal} closeModal = {this.handleCloseModal}>
+          <div className="recipe-modal">
+            <img src={logo} alt="logo"/>
+          </div>
         </Modal>
 
         <div className="App-header">

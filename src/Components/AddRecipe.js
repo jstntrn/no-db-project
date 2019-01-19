@@ -8,7 +8,6 @@ export default class AddRecipe extends Component {
 
 
     render(){
-
         const {openModal} = this.props;
         return(
             <div className="AddCard" onClick={() => openModal()}>
