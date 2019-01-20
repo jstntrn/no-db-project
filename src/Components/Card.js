@@ -8,7 +8,7 @@ import trash from './../images/icons/garbage.png';
 export default class Card extends Component {
 
     render(){
-        const {id, image_url, title, deleteRec, showMod} = this.props;
+        const {id, image_url, title, deleteRec, showMod, showEdit} = this.props;
         
         return(
             <div className="Card">
@@ -19,7 +19,7 @@ export default class Card extends Component {
                     </div>
                 </div>
                 <div className="Card-button-display">
-                    <img className="card-button" src={edit} alt='edit'/>
+                    <img className="card-button" src={edit} alt='edit' onClick={ () => showEdit(id)}/>
                     <img className="card-button" src={trash} alt='delete' onClick={ () => deleteRec(id) }/>
                 </div>
             </div>

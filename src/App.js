@@ -4,7 +4,8 @@ import AddRecipe from './Components/AddRecipe';
 import logo from './images/chef-hat.png'
 import Search from './Components/Search';
 import Modal from './Components/Modal'
-import ModalRecipe from './Components/ModalRecipe'
+import ModalRecipe from './Components/ModalRecipe';
+import ModalEdit from './Components/ModalEdit';
 import './App.css';
 import axios from 'axios';
 
@@ -17,6 +18,7 @@ class App extends Component {
       recipeCards: [],
       showModal: false,
       showModalRecipe: false,
+      showEdit: false,
       cardData: {},
       showID: 0
     };
@@ -26,6 +28,8 @@ class App extends Component {
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.handleOpenRecipe = this.handleOpenRecipe.bind(this);
     this.handleCloseRecipe = this.handleCloseRecipe.bind(this);
+    this.handleOpenEdit = this.handleOpenEdit.bind(this);
+    this.handleCloseEdit = this.handleCloseEdit.bind(this);
     this.addRecipe = this.addRecipe.bind(this);
     this.deleteRecipe = this.deleteRecipe.bind(this);
     this.editRecipe = this.editRecipe.bind(this);
@@ -53,8 +57,8 @@ class App extends Component {
     })
   }
 
-  editRecipe(id) {
-    axios.delete(`/api/recipes/${id}`)
+  editRecipe(id, change) {
+    axios.delete(`/api/recipes/${id}`, change)
     .then( (res) => {
       console.log("edited")
       this.setState({recipeCards: res.data})
@@ -91,6 +95,19 @@ class App extends Component {
   handleCloseRecipe () {
     this.setState({ showModalRecipe: false });
   }
+
+  handleOpenEdit (id) {
+    axios.get(`/api/recipe/${id}`)
+    .then( (res) => {
+      this.setState({
+        cardData: res.data[0],
+        showEdit: true});
+    })
+  }
+
+  handleCloseEdit () {
+    this.setState({ showEdit: false });
+  }
   
   render() {
     return (
@@ -104,6 +121,12 @@ class App extends Component {
           showModal = {this.state.showModalRecipe}
           closeModal = {this.handleCloseRecipe}
           id = {this.showID}
+          data = {this.state.cardData}/>
+
+        <ModalEdit 
+          showEdit = {this.state.showEdit}
+          closeModal = {this.handleCloseEdit}
+          editRec = {this.editRecipe}
           data = {this.state.cardData}/>
 
         <div className="App-header">
@@ -128,7 +151,8 @@ class App extends Component {
               image_url={card.image_url}
               title={card.title}
               deleteRec = {this.deleteRecipe}
-              showMod = {this.handleOpenRecipe}/>
+              showMod = {this.handleOpenRecipe}
+              showEdit = {this.handleOpenEdit}/>
             ))
           }
         </div>
