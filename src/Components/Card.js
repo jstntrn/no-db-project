@@ -9,12 +9,12 @@ export default class Card extends Component {
 
     render(){
         const {id, image_url, title, deleteRec, showMod} = this.props;
-
+        
         return(
             <div className="Card">
                 <div className="image-container" >
-                    <img className="Card-image" src={image_url} alt='taco' />
-                    <div className="overlay" onClick={(id) => showMod(id)}>
+                    <img className="Card-image" src={image_url} alt='food' />
+                    <div className="overlay" onClick={() => showMod(2)}>
                         <div className="card-name">{title}</div>
                     </div>
                 </div>

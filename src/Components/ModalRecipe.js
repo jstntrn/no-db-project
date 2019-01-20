@@ -1,28 +1,12 @@
 import React, { Component } from 'react';
 import './ModalRecipe.css';
-import axios from 'axios';
 
 class ModalRecipe extends Component {
-
-    constructor(props){
-        super(props)
-
-        this.state = {
-            modalCard: {}
-        }
-    }
-
-    componentDidMount(){
-        let {id} = this.props;
-        axios.get(`/api/recipes/${id}`)
-        .then( (res) => {
-            this.setState({modalCard: res.data})
-        })
-    }
-  
+ 
     render(){
         let {closeModal} = this.props;
-        let {title, image_url, ingredients, instructions} = this.state.modalCard;
+        let {title, image_url, ingredients, instructions} = this.props.data;      
+        
         let modal = (
             <div className="dialogStyles">
                 <button className="dialogCloseButtonStyles" onClick={closeModal}>+</button>
@@ -32,7 +16,7 @@ class ModalRecipe extends Component {
                     <h3>INGREDIENTS</h3>
                     <p>{ingredients}</p>
                     <h3>COOKING INSTRUCTIONS</h3>
-                    <p>{instructions}</p> />
+                    <p>{instructions}</p>
                 </div>
             </div>
 

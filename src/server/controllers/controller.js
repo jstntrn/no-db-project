@@ -163,7 +163,7 @@ module.exports = {
         console.log('filtered recipes')
     },
     recipeCard: (req, res) => {
-        const{id} = this.params;
+        const {id} = req.params;
         cardData = recipes.filter( recipe => recipe.id === +id)
         res.status(200).send(cardData)
     },

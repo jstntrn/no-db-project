@@ -17,7 +17,8 @@ class App extends Component {
       recipeCards: [],
       showModal: false,
       showModalRecipe: false,
-      showID: null
+      cardData: {},
+      showID: 0
     };
     
     this.filterRecipes = this.filterRecipes.bind(this);
@@ -48,10 +49,7 @@ class App extends Component {
     axios.delete(`/api/recipes/${id}`)
     .then( (res) => {
       console.log("deleted")
-      this.setState({
-        recipeCards: res.data,
-        showModal: false
-      })
+      this.setState({ recipeCards: res.data })
     })
   }
 
@@ -82,11 +80,29 @@ class App extends Component {
   }
   
   handleOpenRecipe (id) {
-    this.setState({ 
-      showModalRecipe: true, 
-      showID: id})
+    axios.get(`/api/recipe/${id}`)
+    .then( (res) => {
+      this.setState({
+        cardData: res.data[0],
+        showModalRecipe: true});
+    })
   }
   
+  // handleOpenRecipe (id) {
+  //   axios.get(`/api/recipes/${id}`)
+  //   .then( (res) => {
+  //     let {title, image_url, ingredients, instructions} = res.data;
+  //     this.setState({
+  //       recipeCards: {
+  //         title: title,
+  //         image_url: image_url,
+  //         ingredients: ingredients,
+  //         instructions: instructions
+  //       }
+  //     })
+  //   })
+  // }
+
   handleCloseRecipe () {
     this.setState({ showModalRecipe: false });
   }
@@ -102,7 +118,8 @@ class App extends Component {
         <ModalRecipe 
           showModal = {this.state.showModalRecipe}
           closeModal = {this.handleCloseRecipe}
-          id = {this.showID}/>
+          id = {this.showID}
+          data = {this.state.cardData}/>
 
         <div className="App-header">
           <img className="logo" src={logo} alt='logo'/>
