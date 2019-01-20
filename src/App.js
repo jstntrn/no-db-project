@@ -43,7 +43,10 @@ class App extends Component {
     axios.delete(`/api/recipes/${id}`)
     .then( (res) => {
       console.log("deleted")
-      this.setState({recipeCards: res.data})
+      this.setState({
+        recipeCards: res.data,
+        showModal: false
+      })
     })
   }
 
@@ -76,19 +79,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Modal showModal={this.state.showModal} closeModal = {this.handleCloseModal}>
-          <div className="recipe-modal">
-            <h3>TITLE</h3>
-            <input className="modal-input"/>
-            <h3>IMAGE URL</h3>
-            <input className="modal-input"/>
-            <h3>INGREDIENTS</h3>
-            <textarea />
-            <h3>COOKING INSTRUCTIONS</h3>
-            <textarea />
-            <button className="add-button">Add</button>
-          </div>
-        </Modal>
+        <Modal 
+          showModal={this.state.showModal} 
+          closeModal = {this.handleCloseModal} 
+          addRec = {this.addRecipe}/>
 
         <div className="App-header">
           <img className="logo" src={logo} alt='logo'/>
