@@ -87,21 +87,6 @@ class App extends Component {
         showModalRecipe: true});
     })
   }
-  
-  // handleOpenRecipe (id) {
-  //   axios.get(`/api/recipes/${id}`)
-  //   .then( (res) => {
-  //     let {title, image_url, ingredients, instructions} = res.data;
-  //     this.setState({
-  //       recipeCards: {
-  //         title: title,
-  //         image_url: image_url,
-  //         ingredients: ingredients,
-  //         instructions: instructions
-  //       }
-  //     })
-  //   })
-  // }
 
   handleCloseRecipe () {
     this.setState({ showModalRecipe: false });

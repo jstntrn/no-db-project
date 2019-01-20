@@ -30,6 +30,7 @@
 
 .recipe-modal {
     text-align: center;
+    overflow: auto;
   }
   
   h3 {

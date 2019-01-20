@@ -14,7 +14,7 @@ export default class Card extends Component {
             <div className="Card">
                 <div className="image-container" >
                     <img className="Card-image" src={image_url} alt='food' />
-                    <div className="overlay" onClick={() => showMod(2)}>
+                    <div className="overlay" onClick={() => showMod(id)}>
                         <div className="card-name">{title}</div>
                     </div>
                 </div>
