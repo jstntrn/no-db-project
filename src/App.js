@@ -78,7 +78,15 @@ class App extends Component {
       <div>
         <Modal showModal={this.state.showModal} closeModal = {this.handleCloseModal}>
           <div className="recipe-modal">
-            <img src={logo} alt="logo"/>
+            <h3>TITLE</h3>
+            <input className="modal-input"/>
+            <h3>IMAGE URL</h3>
+            <input className="modal-input"/>
+            <h3>INGREDIENTS</h3>
+            <textarea />
+            <h3>COOKING INSTRUCTIONS</h3>
+            <textarea />
+            <button className="add-button">Add</button>
           </div>
         </Modal>
 
