@@ -10,7 +10,7 @@ class Modal extends Component {
             title: '',
             image_url: '',
             ingredients: '',
-            cooking_instructions: ''
+            instructions: ''
         }
         this.handleAdd = this.handleAdd.bind(this);
     }
@@ -35,7 +35,7 @@ class Modal extends Component {
     
     handleInst(val){
         this.setState({
-            cooking_instructions: val
+            instructions: val
         })
     }
 

@@ -162,6 +162,11 @@ module.exports = {
         res.status(200).send(recipesFiltered)
         console.log('filtered recipes')
     },
+    recipeCard: (req, res) => {
+        const{id} = this.params;
+        cardData = recipes.filter( recipe => recipe.id === +id)
+        res.status(200).send(cardData)
+    },
     addRecipe: (req, res) => {
         const {title, image_url, ingredients, instructions} = req.body;
         console.log(req.body);

@@ -8,13 +8,13 @@ import trash from './../images/icons/garbage.png';
 export default class Card extends Component {
 
     render(){
-        const {id, image_url, title, deleteRec} = this.props;
+        const {id, image_url, title, deleteRec, showMod} = this.props;
 
         return(
             <div className="Card">
-                <div className="image-container">
-                    <img className="Card-image" src={image_url} alt='taco'/>
-                    <div className="overlay">
+                <div className="image-container" >
+                    <img className="Card-image" src={image_url} alt='taco' />
+                    <div className="overlay" onClick={(id) => showMod(id)}>
                         <div className="card-name">{title}</div>
                     </div>
                 </div>
