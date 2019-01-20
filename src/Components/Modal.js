@@ -57,7 +57,7 @@ class Modal extends Component {
         let modal = (
             <div className="dialogStyles">
                 <button className="dialogCloseButtonStyles" onClick={this.props.closeModal}>+</button>
-                <div className="recipe-modal">
+                <div className="add-modal">
                     <h3>TITLE</h3>
                     <input className="modal-input" onChange = { (e) => {this.handleTitle(e.target.value)}} />
                     <h3>IMAGE URL</h3>
