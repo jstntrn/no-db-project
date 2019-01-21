@@ -52,7 +52,6 @@ class App extends Component {
   deleteRecipe(id) {
     axios.delete(`/api/recipes/${id}`)
     .then( (res) => {
-      console.log("deleted")
       this.setState({ recipeCards: res.data })
     })
   }
@@ -60,9 +59,7 @@ class App extends Component {
   editRecipe(id, change) {
     axios.put(`/api/recipes/${id}`, change)
     .then( (res) => {
-      console.log("edited")
       this.setState({recipeCards: res.data})
-      console.log(res.data)
     })
   }
 
@@ -75,12 +72,10 @@ class App extends Component {
 
   handleOpenModal () {
     this.setState({ showModal: true })
-    console.log(this.state.showModal);
   }
   
   handleCloseModal () {
     this.setState({ showModal: false });
-    console.log(this.state.showModal);
   }
   
   handleOpenRecipe (id) {
@@ -89,7 +84,6 @@ class App extends Component {
       this.setState({
         cardData: res.data[0],
         showModalRecipe: true});
-        console.log(this.state.recipeCards)
     })
   }
 
@@ -98,9 +92,14 @@ class App extends Component {
   }
 
   handleOpenEdit (id) {
-    this.setState({
-      showID: id,
-      showEdit: true});
+    axios.get(`/api/recipe/${id}`)
+    .then( (res) => {
+      this.setState({
+          cardData: res.data[0],
+          showID: id,
+          showEdit: true
+        })
+    })
   }
 
   handleCloseEdit () {
@@ -108,6 +107,7 @@ class App extends Component {
   }
   
   render() {
+    
     return (
       <div>
         <Modal 
@@ -118,15 +118,14 @@ class App extends Component {
         <ModalRecipe 
           showModal = {this.state.showModalRecipe}
           closeModal = {this.handleCloseRecipe}
-          id = {this.state.showID}
           data = {this.state.cardData}/>
 
         <ModalEdit 
           showEdit = {this.state.showEdit}
           closeModal = {this.handleCloseEdit}
           editRec = {this.editRecipe}
-          id = {this.state.showID}
-          data = {this.state.cardData}/>
+          data = {this.state.cardData}
+          id = {this.state.showID}/>
 
         <div className="App-header">
           <img className="logo" src={logo} alt='logo'/>

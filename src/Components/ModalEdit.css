@@ -80,3 +80,17 @@
     font-weight: bold;
     cursor: pointer;
   }
+
+  .refresh-button {
+    height: 50px;
+    width: 100px;
+    background: none;
+    border: none;
+    background-color: lightcoral;
+    color: white;
+    border-radius: 5px;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }

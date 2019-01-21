@@ -42,8 +42,6 @@ class Modal extends Component {
     handleAdd(){
         let {addRec, closeModal} = this.props;
         let {title, image_url, ingredients, instructions} = this.state;
-        console.log(this.props)
-        console.log(this.state)
         addRec({
             title: title,
             image_url: image_url,

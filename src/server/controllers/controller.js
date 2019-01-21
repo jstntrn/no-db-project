@@ -146,11 +146,9 @@ let recipes = [
 module.exports = {
     getRecipes: (req, res) => {
         res.status(200).send(recipes)
-        console.log('got recipes');
     },
     filterRecipes: (req, res) => {
         let text = req.query.title;
-        console.log(req.query)
         let lowerText = text.toLowerCase();
         recipesFiltered = recipes.filter( recipe => {
             let lowerTitle = recipe.title.toLowerCase();
@@ -159,7 +157,6 @@ module.exports = {
             };
         })
         res.status(200).send(recipesFiltered)
-        console.log('filtered recipes')
     },
     recipeCard: (req, res) => {
         const {id} = req.params;
@@ -168,7 +165,6 @@ module.exports = {
     },
     addRecipe: (req, res) => {
         const {title, image_url, ingredients, instructions} = req.body;
-        console.log(req.body);
         
         recipes.push({
             id: id,
@@ -178,11 +174,9 @@ module.exports = {
             instructions: instructions,
         })
 
-        console.log(recipes);
         
         id++;
         res.status(200).send(recipes);
-        console.log('added recipe');
     },
     editRecipe: (req, res) => {
         const {id} = req.params;
@@ -197,12 +191,10 @@ module.exports = {
             return recipe;
         })
         res.status(200).send(recipes);
-        console.log('edited recipe');
     },
     deleteRecipe: (req, res) => {
         const {id} = req.params;
         recipes = recipes.filter((recipe) => recipe.id !== +id);
         res.status(200).send(recipes);
-        console.log('deleted recipe');
     }
 }
