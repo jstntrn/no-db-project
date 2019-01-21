@@ -149,9 +149,8 @@ module.exports = {
         console.log('got recipes');
     },
     filterRecipes: (req, res) => {
-        console.log("checkcontrol")
-        const {text} = req.params;
-        console.log(text)
+        let text = req.query.title;
+        console.log(req.query)
         let lowerText = text.toLowerCase();
         recipesFiltered = recipes.filter( recipe => {
             let lowerTitle = recipe.title.toLowerCase();

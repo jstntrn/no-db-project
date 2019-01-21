@@ -67,10 +67,9 @@ class App extends Component {
   }
 
   filterRecipes(str) {
-    axios.get(`/api/recipes/${str}`)
+    axios.get(`/api/recipes/filter?title=${str}`)
     .then( (res) => {
       this.setState({recipeCards: res.data});
-      console.log("checkfunction")
     })
   }
 
@@ -99,13 +98,9 @@ class App extends Component {
   }
 
   handleOpenEdit (id) {
-    // axios.get(`/api/recipe/${id}`)
-    // .then( (res) => {
-      this.setState({
-        // cardData: res.data[0],
-        showID: id,
-        showEdit: true});
-    // })
+    this.setState({
+      showID: id,
+      showEdit: true});
   }
 
   handleCloseEdit () {

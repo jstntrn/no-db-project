@@ -10,7 +10,6 @@ export default class Search extends Component{
     }
 
     filterRec(val){
-        console.log("checksearch")
         const {filterRec} = this.props;
         filterRec(val);
     }

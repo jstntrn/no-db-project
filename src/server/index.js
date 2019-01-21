@@ -11,7 +11,7 @@ app.get('/api/recipes', rec.getRecipes)
 app.post('/api/recipes', rec.addRecipe)
 app.delete('/api/recipes/:id', rec.deleteRecipe)
 app.put('/api/recipes/:id', rec.editRecipe)
-app.get('/api/recipes/:text', rec.filterRecipes)
+app.get('/api/recipes/filter', rec.filterRecipes)
 app.get('/api/recipe/:id', rec.recipeCard)
 
 app.listen(4000, () => {
