@@ -58,10 +58,11 @@ class App extends Component {
   }
 
   editRecipe(id, change) {
-    axios.delete(`/api/recipes/${id}`, change)
+    axios.put(`/api/recipes/${id}`, change)
     .then( (res) => {
       console.log("edited")
       this.setState({recipeCards: res.data})
+      console.log(res.data)
     })
   }
 
@@ -89,6 +90,7 @@ class App extends Component {
       this.setState({
         cardData: res.data[0],
         showModalRecipe: true});
+        console.log(this.state.recipeCards)
     })
   }
 
@@ -97,12 +99,13 @@ class App extends Component {
   }
 
   handleOpenEdit (id) {
-    axios.get(`/api/recipe/${id}`)
-    .then( (res) => {
+    // axios.get(`/api/recipe/${id}`)
+    // .then( (res) => {
       this.setState({
-        cardData: res.data[0],
+        // cardData: res.data[0],
+        showID: id,
         showEdit: true});
-    })
+    // })
   }
 
   handleCloseEdit () {
@@ -120,13 +123,14 @@ class App extends Component {
         <ModalRecipe 
           showModal = {this.state.showModalRecipe}
           closeModal = {this.handleCloseRecipe}
-          id = {this.showID}
+          id = {this.state.showID}
           data = {this.state.cardData}/>
 
         <ModalEdit 
           showEdit = {this.state.showEdit}
           closeModal = {this.handleCloseEdit}
           editRec = {this.editRecipe}
+          id = {this.state.showID}
           data = {this.state.cardData}/>
 
         <div className="App-header">

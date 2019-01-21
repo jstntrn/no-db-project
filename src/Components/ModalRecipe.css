@@ -81,3 +81,9 @@
     font-weight: bold;
     cursor: pointer;
   }
+
+  .modal-image {
+    border-radius: 10px;
+    width: 95%;
+    margin-left: 5px;
+  }

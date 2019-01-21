@@ -12,7 +12,7 @@ class ModalRecipe extends Component {
                 <button className="dialogCloseButtonStyles" onClick={closeModal}>+</button>
                 <div className="recipe-modal">
                     <h3>{title}</h3>
-                    <img src={image_url} alt='recipe'/>
+                    <img className="modal-image" src={image_url} alt='recipe'/>
                     <h3>INGREDIENTS</h3>
                     <p>{ingredients}</p>
                     <h3>COOKING INSTRUCTIONS</h3>
