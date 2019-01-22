@@ -110,6 +110,7 @@ class App extends Component {
     
     return (
       <div>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"></link>
         <Modal 
           showModal={this.state.showModal} 
           closeModal = {this.handleCloseModal} 

@@ -12,7 +12,6 @@ export default class AddRecipe extends Component {
         return(
             <div className="AddCard" onClick={() => openModal()}>
                 <img className="AddIcon" src={plus} alt='add recipe'/>
-                <p>Add Recipe</p>
             </div>
         );
     }

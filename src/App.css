@@ -15,7 +15,7 @@
 
 /* block to fill same space as header so that scrolled content will be below fixed header */
 .Header-fill { 
-  min-height: 70px;
+  height: 80px;
   width: 100%;
   margin-top: 0px;
   align-content: center;
@@ -27,24 +27,24 @@
   background-color: white;
   border-bottom: 1px solid lightgray; 
   position: fixed;
-  min-height: 70px;
+  height: 80px;
   width: 100%;
   margin-top: 0px;
   align-content: center;
   padding-left: 20px;
   opacity: .95;
+  display: flex;
+  align-items: center;
 }
 
 
 .Header-title {
   color: #FFAA20;
-  font-family: sans-serif;
-  padding-top: 2px;
+  font-family: 'Pacifico', cursive;
 }
 
 .Search {
   position: absolute;
-  top: 18px;
   right: 90px;
   margin: 0px auto;
 }
@@ -58,3 +58,8 @@
   margin: 0 auto;
 }
 
+.card-gen{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
